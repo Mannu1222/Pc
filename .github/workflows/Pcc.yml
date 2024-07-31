@@ -6,7 +6,8 @@ on:
 jobs:
   build:
     name: Start Building...
-    runs-on: windows-latest 
+    runs-on: windows-latest
+    timeout-minutes: 9999
     
     steps:
       - name: Downloading & Installing Essentials
@@ -18,4 +19,4 @@ jobs:
         run: cmd /c start.bat
 
       - name: Time Counter
-        run: Start-Sleep 
+        run: Start-Sleep -Seconds 1440000000000000000000
